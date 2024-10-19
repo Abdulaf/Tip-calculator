@@ -7,6 +7,7 @@ const totalAmount = document.querySelector(".total-amount");
 const resetBtn = document.querySelector(".reset-button");
 const customInput = document.querySelector(".custom-input");
 const total = document.querySelector(".total-bill");
+const errorMessage = document.querySelector(".error-message");
 
 tipButtons.forEach((tipBtn) => {
   tipBtn.addEventListener("click", (e) => {
@@ -21,6 +22,12 @@ tipButtons.forEach((tipBtn) => {
     total.textContent = (totalPerson * people).toFixed(2);
     totalAmount.textContent = totalPerson;
     tipAmount.textContent = tip;
+    numPeople.classList.remove("active--error");
+    errorMessage.classList.add("hidden");
+    if (numPeople.value === "") {
+      errorMessage.classList.remove("hidden");
+      numPeople.classList.add("active--error");
+    }
   });
 });
 

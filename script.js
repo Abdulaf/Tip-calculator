@@ -43,6 +43,12 @@ customInput.addEventListener("input", (e) => {
   total.textContent = (totalPerson * people).toFixed(2);
   totalAmount.textContent = totalPerson;
   tipAmount.textContent = tip;
+  numPeople.classList.remove("active--error");
+  errorMessage.classList.add("hidden");
+  if (numPeople.value === "") {
+    errorMessage.classList.remove("hidden");
+    numPeople.classList.add("active--error");
+  }
 });
 
 resetBtn.addEventListener("click", (e) => {

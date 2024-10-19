@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Tip &mdash; calculator</title>
+  </head>
+  <!-- Global  -->
+  <body class="font-space-mono bg-light-grayish-cyan">
+    <div
+      class="text-center text-very-dark-cyan tracking-[10px] uppercase font-semibold md:mt-20 text-2xl my-10"
+    >
+      <h1>Spli</h1>
+      <h1>Tter</h1>
+    </div>
+    <div
+      class="flex md:flex-row flex-col bg-white md:p-8 p-4 rounded-2xl max-w-4xl mx-auto gap-8"
+    >
+      <!-- Left -->
+      <div class="flex flex-col md:w-1/2 gap-6">
+        <label for="input" class="flex flex-col relative gap-3"
+          ><span class="text-very-dark-cyan"> Bill </span>
+
+          <!-- bill input -->
+          <input
+            type="number"
+            placeholder="0"
+            class="text-very-dark-cyan font-bold py-2 px-4 text-right rounded-md outline-cyan-300 bg-very-light-grayish-cyan no-spinner bill-input"
+          />
+          <img
+            src="images/icon-dollar.svg"
+            class="absolute bottom-3 opacity-75 left-3"
+            alt=""
+          />
+        </label>
+
+        <!-- Select Tip -->
+        <p class="-mb-3 text-very-dark-cyan">Select Tip %</p>
+        <div class="grid grid-cols-3 gap-3">
+          <button
+            class="focus:bg-very-light-grayish-cyan focus:text-very-dark-cyan focus:border focus:border-cyan-300 hover:bg-cyan-300 hover:text-very-dark-cyan bg-very-dark-cyan text-very-light-grayish-cyan px-3 py-2 rounded-lg font-bold border btns"
+          >
+            5%
+          </button>
+          <button
+            class="focus:bg-very-light-grayish-cyan focus:text-very-dark-cyan focus:border focus:border-cyan-300 hover:bg-cyan-300 hover:text-very-dark-cyan bg-very-dark-cyan text-very-light-grayish-cyan px-3 py-2 rounded-lg font-bold btns"
+          >
+            10%
+          </button>
+          <button
+            class="focus:bg-very-light-grayish-cyan focus:text-very-dark-cyan focus:border focus:border-cyan-300 hover:bg-cyan-300 hover:text-very-dark-cyan bg-very-dark-cyan text-very-light-grayish-cyan px-3 py-2 rounded-lg font-bold btns"
+          >
+            15%
+          </button>
+          <button
+            class="focus:bg-very-light-grayish-cyan focus:text-very-dark-cyan focus:border focus:border-cyan-300 hover:bg-cyan-300 hover:text-very-dark-cyan bg-very-dark-cyan text-very-light-grayish-cyan px-3 py-2 rounded-lg font-bold btns"
+          >
+            25%
+          </button>
+          <button
+            class="focus:bg-very-light-grayish-cyan focus:text-very-dark-cyan focus:border focus:border-cyan-300 hover:bg-cyan-300 hover:text-very-dark-cyan bg-very-dark-cyan text-very-light-grayish-cyan px-3 py-2 rounded-lg font-bold btns"
+          >
+            50%
+          </button>
+          <!-- Custom input -->
+          <input
+            type="number"
+            placeholder="Custom"
+            class="text-very-dark-cyan placeholder:text-center placeholder:text-dark-grayish-cyan placeholder:font-bold border px-3 py-2 text-right rounded-md outline-cyan-300 bg-very-light-grayish-cyan no-spinner md:placeholder:text-lg placeholder:text-sm custom-input"
+          />
+        </div>
+
+        <label for="input" class="flex flex-col relative gap-3"
+          ><span class="text-very-dark-cyan"> Number of People </span>
+          <!-- Number of people input -->
+          <input
+            type="number"
+            placeholder="0"
+            class="text-very-dark-cyan font-bold py-2 px-4 text-right rounded-md outline-cyan-300 bg-very-light-grayish-cyan no-spinner number-of-people-input"
+          />
+          <img
+            src="images/icon-person.svg"
+            class="absolute bottom-3 opacity-75 left-3"
+            alt=""
+          />
+        </label>
+      </div>
+      <!-- Right -->
+      <div
+        class="bg-very-dark-cyan md:w-1/2 rounded-2xl flex flex-col px-6 py-8"
+      >
+        <div class="flex justify-between">
+          <div class="flex flex-col">
+            <p class="text-white">Tip Amount</p>
+            <p class="text-white text-opacity-70">/ person</p>
+          </div>
+          <!-- Tip Amount -->
+          <span class="md:text-5xl text-3xl text-cyan-300 font-bold"
+            >$<span class="tip-amount">0.00</span></span
+          >
+        </div>
+
+        <div class="flex justify-between mt-5">
+          <div class="flex flex-col">
+            <p class="text-white">Total</p>
+            <p class="text-white text-opacity-70">/ person</p>
+          </div>
+          <!-- Total amount -->
+          <span class="md:text-5xl text-3xl text-cyan-300 font-bold"
+            >$<span class="total-amount">0.00</span></span
+          >
+        </div>
+
+        <div class="flex justify-between mt-auto items-center">
+          <p class="text-white">Total bill</p>
+          <!-- Tip Amount -->
+          <span class="md:text-4xl text-3xl text-cyan-300 font-bold"
+            >$<span class="total-bill">0.00</span></span
+          >
+        </div>
+        <!-- Reset Button -->
+        <button
+          class="bg-cyan-300 bg-opacity-60 uppercase transition-all ease-in-out duration-700 py-2 rounded-full mt-11 hover:bg-opacity-100 md:mt-auto text-very-dark-cyan font-bold reset-button"
+        >
+          Reset
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

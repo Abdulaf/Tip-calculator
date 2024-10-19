@@ -859,8 +859,8 @@ video {
 }
 
 @media (min-width: 768px) {
-  .md\:mt-20 {
-    margin-top: 5rem;
+  .md\:mt-14 {
+    margin-top: 3.5rem;
   }
 
   .md\:mt-auto {
